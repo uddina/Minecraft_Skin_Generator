@@ -1,6 +1,7 @@
 
 from diffusers import StableDiffusionPipeline
 from PIL import Image
+import os
 
 import numpy as np
 import argparse
@@ -56,11 +57,16 @@ def restore_skin_alphachannels(image):
     
     return converted_image
 
-def main(prompt, filename, logger):
+def main(prompt, system_prompt, num_inference_steps, guidance_scale, num_images_per_prompt, model_precision_type, filename, logger):
     # Enable GPU acceleration frameworks, if enabled.
-    device = "cpu"
-    dtype = torch.float16
-    
+
+    if model_precision_type == "fp16":
+        dtype = torch.float16
+    elif model_precision_type == "fp32":
+        dtype = torch.float32
+    elif model_precision_type == "auto":
+        dtype = "auto"
+
     if torch.cuda.is_available() and torch.backends.cuda.is_built():
         # A CUDA compatible GPU was found.
         logger.info("CUDA device found, enabling.")
@@ -69,19 +75,28 @@ def main(prompt, filename, logger):
         # Apple M1/M2 machines have the MPS framework.
         logger.info("Apple MPS device found, enabling.")
         device = "mps"
-        dtype = torch.float32
     else:
         # Else we're defaulting to CPU.
+        device = "cpu"
         logger.info("No CUDA or MPS devices found, running on CPU.")
 
     # Load (and possibly download) our Minecraft model.
     logger.info("Loading HuggingFace model: '{}'.".format(MODEL_NAME))
-    pipeline = StableDiffusionPipeline.from_pretrained(MODEL_NAME, torch_dtype=dtype)
+    pipeline = StableDiffusionXLPipeline.from_pretrained(MODEL_NAME, torch_dtype=dtype)
     pipeline.to(device)
-    
+
+    full_prompt = system_prompt + prompt
+
     # Generate the image given the prompt provided on the command line.
     logger.info("Generating skin with prompt: '{}'.".format(prompt))
-    generated_image = pipeline(prompt=prompt).images[0]
+    generated_image = pipeline(
+        prompt=full_prompt,
+        num_inference_steps=num_inference_steps,
+        height=768,
+        width=768,
+        guidance_scale=guidance_scale,
+        num_images_per_prompt=num_images_per_prompt
+    ).images[0]
 
     # Extract and scale down the Minecraft skin portion of the image.
     logger.info("Extracting and scaling Minecraft skin from generated image.")
@@ -92,7 +107,9 @@ def main(prompt, filename, logger):
     minecraft_skin = restore_skin_alphachannels(minecraft_skin)
 
     logger.info("Saving skin to: '{}'.".format(filename))
+    os.chdir("output_minecraft_skins")
     minecraft_skin.save(filename)
+    os.chdir(..)
     
 if __name__ == "__main__":
     logging.basicConfig(stream=sys.stdout, level=logging.ERROR, format='[%(asctime)s] %(levelname)s - %(message)s')
@@ -104,6 +121,11 @@ if __name__ == "__main__":
 
     parser.add_argument('filename', type=str, help='Name of the generated Minecraft skin file')
     parser.add_argument('prompt', type=str, help='Stable Diffusion prompt to be used to generate skin')
+    parser.add_argument('system_prompt', type=str, help='Stable Diffusion system prompt to be used to generate skin in a stylized way')
+    parser.add_argument('num_inference_steps', type=int, help='The number of denoising steps of the image. More denoising steps usually lead to a higher quality image at the cost of slower inference')
+    parser.add_argument('guidance_scale', type=float, help='How closely the generated image adheres to the system_prompt + prompt')
+    parser.add_argument('num_images_per_prompt', type=int, help='The number of images to make with the system prompt + prompt you choosed')
+    parser.add_argument('model_precision_type', type=str, help='The precision type to load the model, like fp16 which is faster, or fp32 which gives better results')
     parser.add_argument('--verbose', help='Produce verbose output while running', action='store_true', default=False)
 
     args = parser.parse_args()
@@ -111,9 +133,14 @@ if __name__ == "__main__":
     filename = args.filename
     verbose = args.verbose
     prompt = args.prompt
+    system_prompt = args.system_prompt
+    num_inference_steps = args.num_inference_steps
+    guidance_scale = args.guidance_scale
+    num_images_per_prompt = args.num_images_per_prompt
+    model_precision_type = args.model_precision_type
     
     if verbose:
         logger.setLevel(logging.INFO)
     
-    main(prompt, filename, logger)
+    main(prompt, system_prompt, num_inference_steps, guidance_scale, num_images_per_prompt, model_precision_type, filename, logger)
     
