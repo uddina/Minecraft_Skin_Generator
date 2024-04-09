@@ -64,8 +64,6 @@ def main(prompt, system_prompt, num_inference_steps, guidance_scale, num_images_
         dtype = torch.float16
     elif model_precision_type == "fp32":
         dtype = torch.float32
-    elif model_precision_type == "auto":
-        dtype = "auto"
 
     if torch.cuda.is_available() and torch.backends.cuda.is_built():
         # A CUDA compatible GPU was found.
@@ -82,7 +80,10 @@ def main(prompt, system_prompt, num_inference_steps, guidance_scale, num_images_
 
     # Load (and possibly download) our Minecraft model.
     logger.info("Loading HuggingFace model: '{}'.".format(MODEL_NAME))
-    pipeline = StableDiffusionXLPipeline.from_pretrained(MODEL_NAME, torch_dtype=dtype)
+    if device == "cpu":
+        pipeline = StableDiffusionXLPipeline.from_pretrained(MODEL_NAME)
+    else:
+        pipeline = StableDiffusionXLPipeline.from_pretrained(MODEL_NAME, torch_dtype=dtype)
     pipeline.to(device)
 
     full_prompt = system_prompt + prompt
@@ -109,7 +110,7 @@ def main(prompt, system_prompt, num_inference_steps, guidance_scale, num_images_
     logger.info("Saving skin to: '{}'.".format(filename))
     os.chdir("output_minecraft_skins")
     minecraft_skin.save(filename)
-    os.chdir(..)
+    os.chdir("..")
     
 if __name__ == "__main__":
     logging.basicConfig(stream=sys.stdout, level=logging.ERROR, format='[%(asctime)s] %(levelname)s - %(message)s')
