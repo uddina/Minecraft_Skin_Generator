@@ -3,6 +3,7 @@ import diffusers
 from diffusers import StableDiffusionPipeline
 from PIL import Image
 import os
+import random
 
 import numpy as np
 import argparse
@@ -87,6 +88,13 @@ def main(prompt, num_inference_steps, guidance_scale, num_images_per_prompt, mod
         pipeline = StableDiffusionXLPipeline.from_pretrained(MODEL_NAME, torch_dtype=dtype)
     pipeline.to(device)
     
+    
+    # random option for 0 seed
+    if seed == 0:
+        seed = random.randint(1, 100000)
+    else:
+        seed = seed
+
 
     # Generate the image given the prompt provided on the command line.
     logger.info("Generating skin with prompt: '{}'.".format(prompt))
@@ -126,7 +134,7 @@ if __name__ == "__main__":
     parser.add_argument('guidance_scale', type=float, help='How closely the generated image adheres to the prompt')
     parser.add_argument('num_images_per_prompt', type=int, help='The number of images to make with the prompt')
     parser.add_argument('model_precision_type', type=str, help='The precision type to load the model, like fp16 which is faster, or fp32 which gives better results')
-    parser.add_argument('seed', type=int, help='A starting point to initiate the generation process')
+    parser.add_argument('seed', type=int, help='A starting point to initiate the generation process, put 0 for random')
     parser.add_argument('filename', type=str, help='Name of the output generated Minecraft skin file')
     parser.add_argument('--verbose', help='Produce verbose output while running', action='store_true', default=False)
 

@@ -152,6 +152,13 @@ def main(prompt, num_inference_steps, guidance_scale, num_images_per_prompt, mod
     pipeline.to(device)
 
 
+    # random option for 0 seed
+    if seed == 0:
+        seed = random.randint(1, 100000)
+    else:
+        seed = seed
+
+
     # Generate the image given the prompt provided on the command line.
     logger.info("Generating skin with prompt: '{}'.".format(prompt))
     generated_image = pipeline(
