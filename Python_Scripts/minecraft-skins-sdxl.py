@@ -1,3 +1,5 @@
+import accelerate
+import diffusers
 from diffusers import StableDiffusionXLPipeline
 from scipy.spatial.distance import cdist
 from PIL import Image
@@ -120,7 +122,7 @@ def extract_minecraft_skin(generated_image, cutoff=50):
 
     return transparent_skin
 
-def main(prompt, system_prompt, num_inference_steps, guidance_scale, num_images_per_prompt, model_precision_type, filename, logger):
+def main(prompt, num_inference_steps, guidance_scale, num_images_per_prompt, model_precision_type, filename, logger):
     # Enable GPU acceleration frameworks, if enabled.
 
     if model_precision_type == "fp16":
@@ -149,12 +151,11 @@ def main(prompt, system_prompt, num_inference_steps, guidance_scale, num_images_
         pipeline = StableDiffusionXLPipeline.from_pretrained(MODEL_NAME, torch_dtype=dtype)
     pipeline.to(device)
 
-    full_prompt = system_prompt + prompt
 
     # Generate the image given the prompt provided on the command line.
     logger.info("Generating skin with prompt: '{}'.".format(prompt))
     generated_image = pipeline(
-        prompt=full_prompt,
+        prompt=prompt,
         num_inference_steps=num_inference_steps,
         height=768,
         width=768,
@@ -180,10 +181,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process the command line arguments.')
 
     parser.add_argument('prompt', type=str, help='Stable Diffusion prompt to be used to generate skin')
-    parser.add_argument('system_prompt', type=str, help='Stable Diffusion system prompt to be used to generate skin in a stylized way')
     parser.add_argument('num_inference_steps', type=int, help='The number of denoising steps of the image. More denoising steps usually lead to a higher quality image at the cost of slower inference')
-    parser.add_argument('guidance_scale', type=float, help='How closely the generated image adheres to the system_prompt + prompt')
-    parser.add_argument('num_images_per_prompt', type=int, help='The number of images to make with the system prompt + prompt you choosed')
+    parser.add_argument('guidance_scale', type=float, help='How closely the generated image adheres to the prompt')
+    parser.add_argument('num_images_per_prompt', type=int, help='The number of images to make with the prompt')
     parser.add_argument('model_precision_type', type=str, help='The precision type to load the model, like fp16 which is faster, or fp32 which gives better results')
     parser.add_argument('filename', type=str, help='Name of the generated Minecraft skin file')
     parser.add_argument('--verbose', help='Produce verbose output while running', action='store_true', default=False)
@@ -193,7 +193,6 @@ if __name__ == "__main__":
     filename = args.filename
     verbose = args.verbose
     prompt = args.prompt
-    system_prompt = args.system_prompt
     num_inference_steps = args.num_inference_steps
     guidance_scale = args.guidance_scale
     num_images_per_prompt = args.num_images_per_prompt
@@ -202,5 +201,5 @@ if __name__ == "__main__":
     if verbose:
         logger.setLevel(logging.INFO)
     
-    main(prompt, system_prompt, num_inference_steps, guidance_scale, num_images_per_prompt, model_precision_type, filename, logger)
+    main(prompt, num_inference_steps, guidance_scale, num_images_per_prompt, model_precision_type, filename, logger)
     
