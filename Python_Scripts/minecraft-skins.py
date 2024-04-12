@@ -83,9 +83,9 @@ def main(prompt, num_inference_steps, guidance_scale, num_images_per_prompt, mod
     # Load (and possibly download) our Minecraft model.
     logger.info("Loading HuggingFace model: '{}'.".format(MODEL_NAME))
     if device == "cpu":
-        pipeline = StableDiffusionXLPipeline.from_pretrained(MODEL_NAME)
+        pipeline = StableDiffusionPipeline.from_pretrained(MODEL_NAME)
     else:
-        pipeline = StableDiffusionXLPipeline.from_pretrained(MODEL_NAME, torch_dtype=dtype)
+        pipeline = StableDiffusionPipeline.from_pretrained(MODEL_NAME, torch_dtype=dtype)
     pipeline.to(device)
     
     
