@@ -149,5 +149,5 @@ if __name__ == "__main__":
     if verbose:
         logger.setLevel(logging.INFO)
     
-    main(prompt, num_inference_steps, guidance_scale, num_images_per_prompt, model_precision_type, seed, filename, logger)
+    main(prompt, num_inference_steps, guidance_scale, model_precision_type, seed, filename, logger)
     
