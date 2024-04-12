@@ -4,7 +4,6 @@ set /p sd_model="Enter the Stable Diffusion Model Version (2/xl, xl understands 
 set /p prompt="Enter your prompt: "
 set /p num_inference_steps="Enter the number of inference steps (more integer value = better but longer process: "
 set /p guidance_scale="Enter the guidance scale (how much the output is adherent to the prompt) : "
-set /p num_images_per_prompt="Enter the number of images per prompt: "
 set /p model_precision_type="Enter the model precision type (fp16 which is faster or fp32 which is more precise): "
 set /p seed="Enter the seed (A starting point to initiate the generation process, put an integer or 0 for random): "
 set /p filename="Enter the output filename with .pgn extension: "
@@ -25,6 +24,6 @@ if /i "%verbose%"=="y" (
 )
 
 
-python Python_Scripts/%sd_model_version%.py "%prompt%" %num_inference_steps% %guidance_scale% %num_images_per_prompt% %model_precision_type% %seed% "%filename%" %verbose_flag%
+python Python_Scripts/%sd_model_version%.py "%prompt%" %num_inference_steps% %guidance_scale% %model_precision_type% %seed% "%filename%" %verbose_flag%
 
 pause
