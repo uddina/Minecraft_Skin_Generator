@@ -99,7 +99,7 @@ def main(prompt, num_inference_steps, guidance_scale, num_images_per_prompt, mod
     # Generate the image given the prompt provided on the command line.
     logger.info("Generating skin with prompt: '{}'.".format(prompt))
     generated_image = pipeline(
-        prompt=full_prompt,
+        prompt=prompt,
         num_inference_steps=num_inference_steps,
         height=768,
         width=768,
