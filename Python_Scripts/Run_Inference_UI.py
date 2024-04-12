@@ -25,28 +25,28 @@ def run_inference(prompt, stable_diffusion_model, num_inference_steps, guidance_
 
     
 # Define Gradio UI components
-prompt_input = gr.Textbox(label="Your Prompt", info="What the Minecraft Skin should look like")
-stable_diffusion_model_input = gr.Dropdown(['2', 'xl'], value="xl", label="Stable Diffusion Model", info="Choose which Stable Diffusion Model to use, xl understands prompts better")
-num_inference_steps_input = gr.Number(label="Number of Inference Steps", precision=0, value=25)
-guidance_scale_input = gr.Number(minimum=0.1, value=7.5, label="Guidance Scale", info="The number of denoising steps of the image. More denoising steps usually lead to a higher quality image at the cost of slower inference")
-model_precision_type_input = gr.Dropdown(["fp16", "fp32"], value="fp16", label="Model Precision Type", info="The precision type to load the model, like fp16 which is faster, or fp32 which gives better results")
-seed_input = gr.Number(value=42, label="Seed", info="A starting point to initiate generation, put 0 for a random one")
-output_image_name_input = gr.Textbox(label="Output Image Name", info="The name of the file of the output image skin, keep the .png", value="output-skin.png")
-verbose_input = gr.Checkbox(label="Verbose Output", info="Produce more detailed output while running", value=False)
+prompt = gr.Textbox(label="Your Prompt", info="What the Minecraft Skin should look like")
+stable_diffusion_model = gr.Dropdown(['2', 'xl'], value="xl", label="Stable Diffusion Model", info="Choose which Stable Diffusion Model to use, xl understands prompts better")
+num_inference_steps = gr.Number(label="Number of Inference Steps", precision=0, value=25)
+guidance_scale = gr.Number(minimum=0.1, value=7.5, label="Guidance Scale", info="The number of denoising steps of the image. More denoising steps usually lead to a higher quality image at the cost of slower inference")
+model_precision_type = gr.Dropdown(["fp16", "fp32"], value="fp16", label="Model Precision Type", info="The precision type to load the model, like fp16 which is faster, or fp32 which gives better results")
+seed = gr.Number(value=42, label="Seed", info="A starting point to initiate generation, put 0 for a random one")
+output_image_name = gr.Textbox(label="Output Image Name", info="The name of the file of the output image skin, keep the .png", value="output-skin.png")
+verbose = gr.Checkbox(label="Verbose Output", info="Produce more detailed output while running", value=False)
 
 
 # Create the Gradio interface
 gr.Interface(
     fn=run_inference,
     inputs=[
-        prompt_input,
-        stable_diffusion_model_input,
-        num_inference_steps_input,
-        guidance_scale_input,
-        model_precision_type_input,
-        seed_input,
-        output_image_name_input,
-        verbose_input
+        prompt,
+        stable_diffusion_model,
+        num_inference_steps,
+        guidance_scale,
+        model_precision_type,
+        seed,
+        output_image_name,
+        verbose
     ],
     outputs=gr.Image(label="Generated Minecraft Skin Image Asset"),
     title="Minecraft Skin Generator",
