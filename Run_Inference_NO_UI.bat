@@ -24,6 +24,6 @@ if /i "%verbose%"=="y" (
 )
 
 
-python Python_Scripts/%sd_model_version%.py "%prompt%" %num_inference_steps% %guidance_scale% %model_precision_type% %seed% "%filename%" %verbose_flag%
+python Python_Scripts/%sd_model_version%.py '\"%prompt%\"' %num_inference_steps% %guidance_scale% %model_precision_type% %seed% "%filename%" %verbose_flag%
 
 pause
