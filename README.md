@@ -6,41 +6,52 @@ The process of fine tuning a Stable Diffusion model to generate Minecraft charac
 
 This codebase further refines that model, and allows for in-game skins to be generated using only a text prompt.  The finetuned model for doing so is available on HuggingFace as [monadical-labs/minecraft-skin-generator](https://huggingface.co/monadical-labs/minecraft-skin-generator).  The model development process is described here in a subsequant blog post: [Even More Skin in the Game: Digging Deeper Into Stable Diffusion-Generated Minecraft Skins](https://monadical.com/posts/minecraft-skins-part2.html).
 
+## Example
+
+Prompt: "A man in a purple suit wearing a tophat"
+Output Image Asset Skin:
+
+![images/purple.png](images/purple.png)
+
+Skin Imported In Game:
+
+![images/minecraft-screenshot.png](images/minecraft-screenshot.png)
+
 # Usage
 
 ## Local
 
-1. Clone the minecraft\_skin\_generator GitHub repository onto your computer:
+1. Click the Code button and download it as a Zip.
 
-  ```python
-  $ git clone https://github.com/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator.git
-  $ cd Stable_Diffusion_Finetuned_Minecraft_Skin_Generator
-  ```
+2. Extract the .zip file.
 
-2: Install requirements:
+3: Open Install.bat and let it install the requirements.
 
-  ```python
-  $ pip install -r requirements.txt
-  ```
+4: Now you gotta Inference:
 
-2. Skins can be generated using the Stable Diffusion 2 minecraft-skins.py script in the bin directory:
+A: Choose UI or NO UI:
 
-  ```python
-  $ python /minecraft-skins.py output-skin.png "A man in a purple suit wearing a tophat"
-  ```
-To use the newer Stable Diffusion XL model, use the minecraft-skins-sdxl.py script:
+- UI: Open Run_Inference_UI.bat and ctrl+click the local url
 
-  ```python
-  $ python bin/minecraft-skins-sdxl.py output-skin.png "A man in a purple suit wearing a tophat"
-  ```
+- NO UI: Open Run_Inference_NO_UI.bat
 
-4. The output skin will be saved into "output-skin.png" and should be similar to this:
+B: Enter the prompt, so how the Minecraft Skins should look like.
 
-  ![images/purple.png](images/purple.png)
-  
-5. The skin can then be imported directly into Minecraft:
+C: Choose the Stable Diffusion Model, either 2 or xl (which is better).
 
-  ![images/minecraft-screenshot.png](images/minecraft-screenshot.png)
+D: Enter the integer value for the Inference Steps, which is basically denoising the image so an higher value = better output but longer process.
+
+E: Enter the guidance scale, the float value for how much the output is adherent to the prompt.
+
+F: Enter the model precision type,fp16 (which is faster) or fp32 (which is more precise but slower and need more resources).
+
+G: Put the Seed, the starting point to initiate the generation process, either an integer value or 0 for a random one.
+
+H: Write the Output Image Skin Asset Name with the .png extension.
+
+I: Choose if to show a verbose (detailed) output or not, not really needed (y or n).
+
+5. The output skin will be saved into the output_minecraft_skins folder with the output name you gave it before. You can import now the skin into Minecraft, which is slightly different way based on the version you play so just google it lol.
 
 ## Online
 
@@ -72,6 +83,9 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 
 ## Changelog
+### Update - April 13th, 2024
+Nick088 improved the local installation
+
 ### Update - April 12th, 2024
 Nick088 made the Hugging Face Space and the Google Colab agradio Ui (based on the hf space)
 
