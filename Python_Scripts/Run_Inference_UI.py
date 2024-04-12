@@ -17,7 +17,7 @@ def run_inference(prompt, stable_diffusion_model, num_inference_steps, guidance_
     else:
         sd_model = "minecraft-skins-sdxl"
 
-    command = f"python Python_Scripts/{sd_model}.py '{prompt}' {num_inference_steps} {guidance_scale} {model_precision_type} {seed} {output_image_name} {'--verbose' if verbose else ''}"
+    command = f"python Python_Scripts/{sd_model}.py '\"{prompt}\"' {num_inference_steps} {guidance_scale} {model_precision_type} {seed} {output_image_name} {'--verbose' if verbose else ''}"
     
     os.system(command)
 
