@@ -4,7 +4,6 @@ from diffusers import StableDiffusionPipeline
 from PIL import Image
 import os
 import random
-
 import numpy as np
 import argparse
 import logging
@@ -59,7 +58,7 @@ def restore_skin_alphachannels(image):
     
     return converted_image
 
-def main(prompt, num_inference_steps, guidance_scale, num_images_per_prompt, model_precision_type, seed, filename, logger):
+def main(prompt, num_inference_steps, guidance_scale, model_precision_type, seed, filename, logger):
     # Enable GPU acceleration frameworks, if enabled.
 
     if model_precision_type == "fp16":
@@ -104,7 +103,7 @@ def main(prompt, num_inference_steps, guidance_scale, num_images_per_prompt, mod
         height=768,
         width=768,
         guidance_scale=guidance_scale,
-        num_images_per_prompt=num_images_per_prompt,
+        num_images_per_prompt=1,
         seed=seed
     ).images[0]
 
@@ -132,7 +131,6 @@ if __name__ == "__main__":
     parser.add_argument('prompt', type=str, help='Stable Diffusion prompt to be used to generate skin')
     parser.add_argument('num_inference_steps', type=int, help='The number of denoising steps of the image. More denoising steps usually lead to a higher quality image at the cost of slower inference')
     parser.add_argument('guidance_scale', type=float, help='How closely the generated image adheres to the prompt')
-    parser.add_argument('num_images_per_prompt', type=int, help='The number of images to make with the prompt')
     parser.add_argument('model_precision_type', type=str, help='The precision type to load the model, like fp16 which is faster, or fp32 which gives better results')
     parser.add_argument('seed', type=int, help='A starting point to initiate the generation process, put 0 for random')
     parser.add_argument('filename', type=str, help='Name of the output generated Minecraft skin file')
@@ -145,7 +143,6 @@ if __name__ == "__main__":
     prompt = args.prompt
     num_inference_steps = args.num_inference_steps
     guidance_scale = args.guidance_scale
-    num_images_per_prompt = args.num_images_per_prompt
     model_precision_type = args.model_precision_type
     seed = args.seed
     
