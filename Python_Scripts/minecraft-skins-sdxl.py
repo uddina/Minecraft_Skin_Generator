@@ -4,7 +4,7 @@ from diffusers import StableDiffusionXLPipeline
 from scipy.spatial.distance import cdist
 from PIL import Image
 import os
-
+import random
 import numpy as np
 import argparse
 import logging
