@@ -1,8 +1,8 @@
 @echo off
 
-set /p sd_model="Enter the Stable Diffusion Model Version (2/xl, xl understands better prompts): "
 set /p prompt="Enter your prompt: "
-set /p num_inference_steps="Enter the number of inference steps (more integer value = better but longer process: "
+set /p sd_model="Enter the Stable Diffusion Model Version (2/xl, xl understands better prompts): "
+set /p num_inference_steps="Enter the number of inference steps (more integer value = better but longer process) : "
 set /p guidance_scale="Enter the guidance scale (how much the output is adherent to the prompt) : "
 set /p model_precision_type="Enter the model precision type (fp16 which is faster or fp32 which is more precise): "
 set /p seed="Enter the seed (A starting point to initiate the generation process, put an integer or 0 for random): "
