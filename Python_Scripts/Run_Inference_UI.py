@@ -21,7 +21,6 @@ def run_inference(prompt, stable_diffusion_model, num_inference_steps, guidance_
     
     os.system(command)
 
-
     return os.path.join(f"output_minecraft_skins/{output_image_name}")
 
     
