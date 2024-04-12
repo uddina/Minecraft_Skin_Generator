@@ -6,9 +6,9 @@ The process of fine tuning a Stable Diffusion model to generate Minecraft charac
 
 This codebase further refines that model, and allows for in-game skins to be generated using only a text prompt.  The finetuned model for doing so is available on HuggingFace as [monadical-labs/minecraft-skin-generator](https://huggingface.co/monadical-labs/minecraft-skin-generator).  The model development process is described here in a subsequant blog post: [Even More Skin in the Game: Digging Deeper Into Stable Diffusion-Generated Minecraft Skins](https://monadical.com/posts/minecraft-skins-part2.html).
 
-## Usage
+# Usage
 
-### Local
+## Local
 
 1. Clone the minecraft\_skin\_generator GitHub repository onto your computer:
 
@@ -36,23 +36,33 @@ To use the newer Stable Diffusion XL model, use the minecraft-skins-sdxl.py scri
 
   ![images/minecraft-screenshot.png](images/minecraft-screenshot.png)
 
-### Online
+## Online
 
-#### Website
+### Website
 We have released a hosted version of our Minecraft Skin Generator at: [https://www.skingenerator.io](https://www.skingenerator.io)
 
 While closed source, this version improves on the quality of generated skins from the publicly available model, plus it supports transparency in the helmet/hair section of the skins.  Please check it out and let us know what you think!
 
-#### Google Colab
+### Google Colab
 
-##### NO UI
+#### NO UI
 Run <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_NO_UI.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
-##### Ipywidgets UI
+#### UI
+
+##### Ipywidgets
 Run <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_Ipywidgets_UI.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
+
+##### Gradio **(WARNING: COULD RISK YOUR FREE TIER COLAB ACC)**
+Run <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_Gradio_UI.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
+### Hugging Face Space
+You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator) which runs on CPU and will be slower, you can duplicate it by clicking the 3 dots in the right up corner and duplicate it on cpu to skip queue and also you can use your paid GPU to make it go faster
 
 
 ## Changelog
