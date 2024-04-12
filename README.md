@@ -13,14 +13,20 @@ This codebase further refines that model, and allows for in-game skins to be gen
 1. Clone the minecraft\_skin\_generator GitHub repository onto your computer:
 
   ```python
-  $ git clone git@github.com:Monadical-SAS/minecraft_skin_generator.git
-  $ cd minecraft_skin_generator
+  $ git clone https://github.com/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator.git
+  $ cd Stable_Diffusion_Finetuned_Minecraft_Skin_Generator
+  ```
+
+2: Install requirements:
+
+  ```python
+  $ pip install -r requirements.txt
   ```
 
 2. Skins can be generated using the Stable Diffusion 2 minecraft-skins.py script in the bin directory:
 
   ```python
-  $ python bin/minecraft-skins.py output-skin.png "A man in a purple suit wearing a tophat"
+  $ python /minecraft-skins.py output-skin.png "A man in a purple suit wearing a tophat"
   ```
 To use the newer Stable Diffusion XL model, use the minecraft-skins-sdxl.py script:
 
