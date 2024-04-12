@@ -66,6 +66,9 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 
 ## Changelog
+### Update - April 12th, 2024
+Nick088 made the Hugging Face Space and the Google Colab agradio Ui (based on the hf space)
+
 ### Update - April 11th, 2024
 Nick088 Forked this repository and uploaded an updated version of the 2 py scripts with more features and uploaded the Google Colabs to run this model for free on the CPU (slower) or Free Daily Colab T4 Gpu!
 
