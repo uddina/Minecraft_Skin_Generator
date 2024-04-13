@@ -9,6 +9,7 @@ This codebase further refines that model, and allows for in-game skins to be gen
 ## Example
 
 Prompt: "A man in a purple suit wearing a tophat"
+
 Output Image Asset Skin:
 
 ![images/purple.png](images/purple.png)
