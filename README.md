@@ -1,5 +1,7 @@
 # Stable Diffusion Minecraft Skin Generator
 
+[![Discord](https://img.shields.io/discord/1198701940511617164?color=%23738ADB&label=Discord&style=for-the-badge)](https://discord.gg/dnrgs5GHfG)
+
 ## Overview
 
 The process of fine tuning a Stable Diffusion model to generate Minecraft character previews is detailed here: [Digging into Stable Diffusion-Generated Minecraft Skins](https://monadical.com/posts/mincraft-skin-generation.html).
@@ -21,6 +23,8 @@ Skin Imported In Game:
 # Usage
 
 ## Local
+
+### Precompiled
 
 1. Click the Code button and download it as a Zip.
 
