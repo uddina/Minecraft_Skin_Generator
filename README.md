@@ -94,11 +94,11 @@ Nick088 made the Hugging Face Space and the Google Colab agradio Ui (based on th
 Nick088 Forked this repository and uploaded an updated version of the 2 py scripts with more features and uploaded the Google Colabs to run this model for free on the CPU (slower) or Free Daily Colab T4 Gpu!
 
 ### 💥 Update - February 19th, 2024 💥
-
 We have released a new open sourced Minecraft Skin Generator XL model based on Stable Diffusion XL. It offers many improvements over the original model, including support for the transparency layer.
 
 The new model can be [downloaded from HuggingFace](https://huggingface.co/monadical-labs/minecraft-skin-generator-sdxl), or see below for commandline usage via the minecraft-skins-sdxl.py script.
 
-## Author of the Original Model
+## Credits
+Author of the AI Model: Cory Spencer <cory@monadical.com>
 
-Cory Spencer <cory@monadical.com>
+Forked Improved Version: [Nick088](https://linktr.ee/Nick088)
