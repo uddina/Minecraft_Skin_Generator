@@ -4,3 +4,4 @@ accelerate
 sentencepiece 
 transformers
 gradio
+diffusers
