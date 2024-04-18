@@ -1,0 +1,7 @@
+torch
+scipy
+protobuf
+accelerate
+sentencepiece
+transformers
+diffusers
