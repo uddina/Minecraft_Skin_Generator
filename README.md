@@ -30,15 +30,13 @@ Skin Imported In Game:
 
 2. Extract the .zip file.
 
-3: Open Install.bat and let it install the requirements.
-
-4: Now you gotta Inference:
+3: Now you gotta Inference:
 
 A: Choose UI or NO UI:
 
-- UI: Open Run_Inference_UI.bat and ctrl+click the local url
+- UI: Open Run_Inference_UI.bat, let it create the venv_ui and install the requirements. After that ctrl+click the local url.
 
-- NO UI: Open Run_Inference_NO_UI.bat
+- NO UI: Open Run_Inference_NO_UI.bat, let it create the venv_no_ui and install the requirements.
 
 B: Enter the prompt, so how the Minecraft Skins should look like.
 
@@ -56,7 +54,8 @@ H: Write the Output Image Skin Asset Name with the .png extension.
 
 I: Choose if to show a verbose (detailed) output or not, not really needed (y or n).
 
-5. The output skin will be saved into the output_minecraft_skins folder with the output name you gave it before. You can import now the skin into Minecraft, which is slightly different way based on the version you play so just google it lol.
+4. If you are running NO UI The output skin will be saved into the output_minecraft_skins folder with the output name you gave it before, else just download it by the download icon in the ui version in the web ui when its done making the skin.
+5. You can import now the skin into Minecraft, which is slightly different way based on the version you play so just google it lol.
 
 ## Online
 
