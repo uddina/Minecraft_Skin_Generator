@@ -17,7 +17,9 @@ to3d_model_command = f"sh Scripts/64x32to64x64skin3dmodel.sh output_minecraft_sk
     
 os.system(to3d_model_command)
 
-filename_3d_model = "Scripts/3d_model_player.glb"
+os.chdir("Scripts")
+
+filename_3d_model = "3d_model_player.glb"
 gltf = GLTF2().load(filename_3d_model)
 
 os.chdir("..")
@@ -40,7 +42,7 @@ if existing_texture_index < len(gltf.textures):
     # Step 3: Add the new image and texture to the GLB
     # Create and add a new image to the glTF (same as before)
     new_image = GLTFImage()
-    new_image.uri = os.path.join(f"output_minecraft_skins/{filename}-converted.png")
+    new_image.uri = os.path.join(f"output_minecraft_skins/{filename_skin}-converted.png")
     gltf.images.append(new_image)
 
 
