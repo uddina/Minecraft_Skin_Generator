@@ -66,7 +66,7 @@ H: Choose if to show a verbose (detailed) output or not, not really needed (y or
 
 - UI with 3d model: Download output skin asset image by the download icon in the ui version in the web ui when its done making the skin, also you can download the 3d model in .glb format of the skin.
   
-- NO UI with 3d model: The output skin will be saved into the output_minecraft_skins folder with the output name you gave it before, also you will have a (name-you-gave-the-skin)-converted.png which is the skin converted from 64x32 to 64x64 to make it adherent on the 3d model player which are in the files (this bug happened only to this 3d model, the skin asset will work fine in game)
+- NO UI with 3d model: The output skin will be saved into the output_minecraft_skins folder with the output name you gave it before, also you will have a (name-you-gave-the-skin)-converted.png which is the skin converted from 64x32 to 64x64 to make it adherent on the 3d model player which are in the files (this bug happened only to this 3d model, the skin asset will work fine in game), and also you will find a (name-you-gave-the-skin)_3d_model.glb
   
 5. You can import now the skin into Minecraft, which is slightly different way based on the version you play so just google it lol.
 
