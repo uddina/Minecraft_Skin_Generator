@@ -30,31 +30,44 @@ Skin Imported In Game:
 
 2. Extract the .zip file.
 
-3: Now you gotta Inference:
+3. Now you gotta Inference:
 
-A: Choose UI or NO UI:
+4. Choose which version:
 
 - UI: Open Run_Inference_UI.bat, let it create the venv_ui and install the requirements. After that ctrl+click the local url.
 
-- NO UI: Open Run_Inference_NO_UI.bat, let it create the venv_no_ui and install the requirements.
+- NO UI: Open Run_Inference_NO_UI.bat, let it create the venv_no_ui and install the requirements, it will ask you for the parameters to set that are explained below
 
-B: Enter the prompt, so how the Minecraft Skins should look like.
+- UI with 3d Model: Open Run_Inference_UI_With_3d_Model.bat, let it create the venv_ui and install the requirements. After that ctrl+click the local url.
 
-C: Choose the Stable Diffusion Model, either 2 or xl (which is better).
+- NO UI with 3d Model: Open Run_Inference_NO_UI_3d_Model.bat, let it create the venv_no_ui and install the requirements, it will ask you for the parameters to set that are explained below
 
-D: Enter the integer value for the Inference Steps, which is basically denoising the image so an higher value = better output but longer process.
+A: Enter the prompt, so how the Minecraft Skins should look like.
 
-E: Enter the guidance scale, the float value for how much the output is adherent to the prompt.
+B: Choose the Stable Diffusion Model, either 2 or xl (which is better).
 
-F: Enter the model precision type,fp16 (which is faster) or fp32 (which is more precise but slower and need more resources).
+C: Enter the integer value for the Inference Steps, which is basically denoising the image so an higher value = better output but longer process.
 
-G: Put the Seed, the starting point to initiate the generation process, either an integer value or 0 for a random one.
+D: Enter the guidance scale, the float value for how much the output is adherent to the prompt.
 
-H: Write the Output Image Skin Asset Name with the .png extension.
+E: Enter the model precision type,fp16 (which is faster) or fp32 (which is more precise but slower and need more resources).
 
-I: Choose if to show a verbose (detailed) output or not, not really needed (y or n).
+F: Put the Seed, the starting point to initiate the generation process, either an integer value or 0 for a random one.
 
-4. If you are running NO UI The output skin will be saved into the output_minecraft_skins folder with the output name you gave it before, else just download it by the download icon in the ui version in the web ui when its done making the skin.
+G: Write the Output Image Skin Asset Name with the .png extension.
+
+H: Choose if to show a verbose (detailed) output or not, not really needed (y or n).
+
+4. About the Outputs, if you are running:
+   
+- UI: Download output skin asset image by the download icon in the ui version in the web ui when its done making the skin.
+  
+- NO UI: The output skin asset image will be saved into the output_minecraft_skins folder with the output name you gave it before.
+
+- UI with 3d model: Download output skin asset image by the download icon in the ui version in the web ui when its done making the skin, also you can download the 3d model in .glb format of the skin.
+  
+- NO UI with 3d model: The output skin will be saved into the output_minecraft_skins folder with the output name you gave it before, also you will have a (name-you-gave-the-skin)-converted.png which is the skin converted from 64x32 to 64x64 to make it adherent on the 3d model player which are in the files (this bug happened only to this 3d model, the skin asset will work fine in game)
+  
 5. You can import now the skin into Minecraft, which is slightly different way based on the version you play so just google it lol.
 
 ## Online
@@ -87,6 +100,12 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 
 ## Changelog
+### Update - April 28th, 2024
+Add a way to see the skin in 3d model preview and also download it for all versions thanks to:
+- daroche (helping me fix the 3d model texture isue)
+- [Brottweiler](https://gist.github.com/Brottweiler/483d0856c6692ef70cf90bf1a85ce364) (script to fix the 3d model texture
+- [meew](https://huggingface.co/spaces/meeww/Minecraft_Skin_Generator/blob/main/models/player_model.glb) (Minecraft Player 3d model)
+
 ### Update - April 13th, 2024
 Nick088 improved the local installation
 
@@ -102,6 +121,10 @@ We have released a new open sourced Minecraft Skin Generator XL model based on S
 The new model can be [downloaded from HuggingFace](https://huggingface.co/monadical-labs/minecraft-skin-generator-sdxl), or see below for commandline usage via the minecraft-skins-sdxl.py script.
 
 ## Credits
-Author of the AI Model: Cory Spencer <cory@monadical.com>
+- Author of the AI Model: Cory Spencer <cory@monadical.com>
+- Forked Improved Version: [Nick088](https://linktr.ee/Nick088)
+- daroche (helping me fix the 3d model texture isue)
+- [Brottweiler](https://gist.github.com/Brottweiler/483d0856c6692ef70cf90bf1a85ce364) (script to fix the 3d model texture
+- [meew](https://huggingface.co/spaces/meeww/Minecraft_Skin_Generator/blob/main/models/player_model.glb) (Minecraft Player 3d model)
 
-Forked Improved Version: [Nick088](https://linktr.ee/Nick088)
+
