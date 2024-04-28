@@ -20,6 +20,10 @@ Skin Imported In Game:
 
 ![images/minecraft-screenshot.png](images/minecraft-screenshot.png)
 
+# Requirements:
+- [Python (3.10.6 or more)](https://www.python.org/downloads/)
+- [ImageMagick (ONLY IF YOU WANNA SEE THE GENERATED SKIN AS 3D MODEL](https://imagemagick.org/script/download.php)
+
 # Usage
 
 ## Local
@@ -38,8 +42,6 @@ Skin Imported In Game:
 
 - NO UI: Open Run_Inference_NO_UI.bat, let it create the venv_no_ui and install the requirements, it will ask you for the parameters to set that are explained below
 
-- UI with 3d Model: Open Run_Inference_UI_With_3d_Model.bat, let it create the venv_ui and install the requirements. After that ctrl+click the local url.
-
 - NO UI with 3d Model: Open Run_Inference_NO_UI_3d_Model.bat, let it create the venv_no_ui and install the requirements, it will ask you for the parameters to set that are explained below
 
 A: Enter the prompt, so how the Minecraft Skins should look like.
@@ -56,15 +58,15 @@ F: Put the Seed, the starting point to initiate the generation process, either a
 
 G: Write the Output Image Skin Asset Name with the .png extension.
 
-H: Choose if to show a verbose (detailed) output or not, not really needed (y or n).
+H: Choose if to see the output as a 3D model too or not, you need [ImageMagick (ONLY IF YOU WANNA SEE THE GENERATED SKIN AS 3D MODEL](https://imagemagick.org/script/download.php) for it (NO UI: y or n / UI: check the box).
+
+I: Choose if to show a verbose (detailed) output or not, not really needed (NO UI: y or n / UI: check the box).
 
 4. About the Outputs, if you are running:
    
-- UI: Download output skin asset image by the download icon in the ui version in the web ui when its done making the skin.
+- UI: Download output skin asset image by the download icon in the ui version in the web ui when its done making the skin, also you can download the 3d model in .glb format of the skin.
   
 - NO UI: The output skin asset image will be saved into the output_minecraft_skins folder with the output name you gave it before.
-
-- UI with 3d model: Download output skin asset image by the download icon in the ui version in the web ui when its done making the skin, also you can download the 3d model in .glb format of the skin.
   
 - NO UI with 3d model: The output skin will be saved into the output_minecraft_skins folder with the output name you gave it before, also you will have a (name-you-gave-the-skin)-converted.png which is the skin converted from 64x32 to 64x64 to make it adherent on the 3d model player which are in the files (this bug happened only to this 3d model, the skin asset will work fine in game), and also you will find a (name-you-gave-the-skin)_3d_model.glb
   
