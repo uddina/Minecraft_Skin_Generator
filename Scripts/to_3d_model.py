@@ -64,6 +64,8 @@ if existing_texture_index < len(gltf.textures):
     # Now you can convert the images to data URIs and save the updated GLB
     gltf.convert_images(ImageFormat.DATAURI)
 
+    os.chdir("output_minecraft_skins")
+    
     output_3d_model = f"{filename_skin}_3d_model.glb"
     gltf.save(output_3d_model)
 else:
