@@ -134,6 +134,7 @@ if __name__ == "__main__":
     parser.add_argument('model_precision_type', type=str, help='The precision type to load the model, like fp16 which is faster, or fp32 which gives better results')
     parser.add_argument('seed', type=int, help='A starting point to initiate the generation process, put 0 for random')
     parser.add_argument('filename', type=str, help='Name of the output generated Minecraft skin file')
+    parser.add_argument('--model_3d', help='Show the output as a 3D Model too', action='store_true', default=False)
     parser.add_argument('--verbose', help='Produce verbose output while running', action='store_true', default=False)
 
     args = parser.parse_args()
@@ -145,9 +146,15 @@ if __name__ == "__main__":
     guidance_scale = args.guidance_scale
     model_precision_type = args.model_precision_type
     seed = args.seed
+    model_3d = args.model_3d
     
     if verbose:
         logger.setLevel(logging.INFO)
     
     main(prompt, num_inference_steps, guidance_scale, model_precision_type, seed, filename, logger)
-    
+
+    if model_3d:
+        os.chdir("Scripts")
+        command_3d_model = f"python to_3d_model.py '{filename}'"
+        os.system(command_3d_model)
+        os.chdir("..")
