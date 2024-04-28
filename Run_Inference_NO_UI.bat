@@ -40,6 +40,7 @@ set /p guidance_scale="Enter the guidance scale (how much the output is adherent
 set /p model_precision_type="Enter the model precision type (fp16 which is faster or fp32 which is more precise): "
 set /p seed="Enter the seed (A starting point to initiate the generation process, put an integer or 0 for random): "
 set /p filename="Enter the output filename with .png extension: "
+set /p model_3d="See the skin also as a 3D Model? (y/n): "
 set /p verbose="Produce Verbose (detailed) Output? (y/n): "
 
 
@@ -56,8 +57,13 @@ if /i "%verbose%"=="y" (
     set verbose_flag=
 )
 
+if /i "%model_3d%"=="y" (
+    set model_3d_flag=--model_3d
+) else (
+    set model_3d_flag=
+)
 
-python Scripts/%sd_model_version%.py "\"%prompt%\"" %num_inference_steps% %guidance_scale% %model_precision_type% %seed% "%filename%" %verbose_flag%
+python Scripts/%sd_model_version%.py "\"%prompt%\"" %num_inference_steps% %guidance_scale% %model_precision_type% %seed% "%filename%" %model_3d% %verbose_flag%
 
 REM Print the step to the terminal
 echo Deactivating the virtual environment...
