@@ -26,7 +26,7 @@ if %errorlevel% equ 0 (
     echo Installing requirements...
 
     REM Install requirements inside the virtual environment
-    pip install -r "%~dp0Python_Scripts\requirements_no_ui.txt"
+    pip install -r "%~dp0Scripts\requirements_no_ui.txt"
 )
 
 REM Print the step to the terminal
@@ -57,7 +57,7 @@ if /i "%verbose%"=="y" (
 )
 
 
-python Python_Scripts/%sd_model_version%.py "\"%prompt%\"" %num_inference_steps% %guidance_scale% %model_precision_type% %seed% "%filename%" %verbose_flag%
+python Scripts/%sd_model_version%.py "\"%prompt%\"" %num_inference_steps% %guidance_scale% %model_precision_type% %seed% "%filename%" %verbose_flag%
 
 REM Print the step to the terminal
 echo Deactivating the virtual environment...
