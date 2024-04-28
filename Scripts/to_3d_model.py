@@ -16,9 +16,13 @@ os.chdir("..")
 to3d_model_command = f"sh Scripts/64x32to64x64skin3dmodel.sh output_minecraft_skins/{filename_skin}"
     
 os.system(to3d_model_command)
-    
+
+os.chdir("Scripts")
+
 filename_3d_model = "Scripts/3d_model_player.glb"
 gltf = GLTF2().load(filename_3d_model)
+
+os.chdir("..")
 
 # Step 1: Find the index of the existing texture you want to replace
 # Let's assume the texture you want to replace is at index 1 (you need to replace 1 with the actual index)
