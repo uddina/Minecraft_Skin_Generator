@@ -44,7 +44,7 @@ Skin Imported In Game:
 
 A: Enter the prompt, so how the Minecraft Skins should look like.
 
-B: Choose the Stable Diffusion Model, either 2 or xl (which is better).
+B: Choose the Stable Diffusion Model, either 2 or xl (xl is better).
 
 C: Enter the integer value for the Inference Steps, which is basically denoising the image so an higher value = better output but longer process.
 
@@ -66,7 +66,7 @@ I: Choose if to show a verbose (detailed) output or not, not really needed (NO U
   
 - NO UI: The output skin asset image will be saved into the output_minecraft_skins folder with the output name you gave it before, also you will have a (name-you-gave-the-skin)-converted.png which is the skin converted from 64x32 to 64x64 to make it adherent on the 3d model player which are in the files (this bug happened only to this 3d model, the skin asset will work fine in game, you can delete that file if you want to, it's useless and the 3d model will work without it), and also you will find a (name-you-gave-the-skin)_3d_model.glb
   
-5. You can import now the skin into Minecraft, which is slightly different way based on the Minecraft version you play so just google it lol.
+5. You can import now the skin into Minecraft, which you can do with a slightly different way based on the Minecraft version you play so just google it lol.
 
 ## Online
 
