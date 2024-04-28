@@ -6,8 +6,9 @@ from pygltflib.utils import ImageFormat, Texture, Material, Image as GLTFImage
 import argparse
 
 # Create an argument parser
-parser = argparse.ArgumentParser(description='Process Minecraft skin and generate 3D model')
-parser.add_argument('filename_skin', type=str, help='Path to the Minecraft skin file to convert it from 64x32 to 64x64 to make it work on the 3d model view')
+parser = argparse.ArgumentParser(description='Fix texture generated minecraft skin from 64x32 to 64x64 to render it on the 3d model viewer')
+parser.add_argument('filename_skin', type=str, help='Filename of the generated skin')
+filename_skin = filename_skin.args
 
 os.chdir("..")
 
