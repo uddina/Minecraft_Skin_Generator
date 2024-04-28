@@ -26,14 +26,14 @@ if %errorlevel% equ 0 (
     echo Installing requirements...
 
     REM Install requirements inside the virtual environment
-    pip install -r "%~dp0Python_Scripts\requirements_ui.txt"
+    pip install -r "%~dp0Scripts\requirements_ui.txt"
 )
 
 REM Print the step to the terminal
 echo Running Python script...
 
 REM Run your Python file here
-python "%~dp0Python_Scripts\Run_Inference_UI.py"
+python "%~dp0Scripts\Run_Inference_UI.py"
 
 REM Print the step to the terminal
 echo Deactivating the virtual environment...
