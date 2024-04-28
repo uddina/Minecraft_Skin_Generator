@@ -1,15 +1,17 @@
 import subprocess
 import os
-import sys
 from PIL import Image, ImageEnhance
 from pygltflib import GLTF2
 from pygltflib.utils import ImageFormat, Texture, Material, Image as GLTFImage
+import argparse
 
-filename = sys.argv[7]
+# Create an argument parser
+parser = argparse.ArgumentParser(description='Process Minecraft skin and generate 3D model')
+parser.add_argument('filename_skin', help='Path to the Minecraft skin file to convert it from 64x32 to 64x64 to make it work on the 3d model view')
 
 os.chdir("..")
 
-to3d_model_command = f"sh Scripts/64x32to64x64skin3dmodel.sh output_minecraft_skins/{filename}"
+to3d_model_command = f"sh Scripts/64x32to64x64skin3dmodel.sh output_minecraft_skins/{filename_skin}"
     
 os.system(to3d_model_command)
     
