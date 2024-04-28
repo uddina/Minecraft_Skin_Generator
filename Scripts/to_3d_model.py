@@ -8,6 +8,7 @@ import argparse
 # Create an argument parser
 parser = argparse.ArgumentParser(description='Fix texture generated minecraft skin from 64x32 to 64x64 to render it on the 3d model viewer')
 parser.add_argument('filename_skin', type=str, help='Filename of the generated skin')
+args = parser.parse_args()
 filename_skin = args.filename_skin
 
 os.chdir("..")
