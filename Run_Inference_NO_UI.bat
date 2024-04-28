@@ -59,8 +59,6 @@ if /i "%verbose%"=="y" (
 
 python Scripts/%sd_model_version%.py "\"%prompt%\"" %num_inference_steps% %guidance_scale% %model_precision_type% %seed% "%filename%" %verbose_flag%
 
-python Scripts/to_3d_model.py
-
 REM Print the step to the terminal
 echo Deactivating the virtual environment...
 
