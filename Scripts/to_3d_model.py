@@ -17,8 +17,6 @@ to3d_model_command = f"sh Scripts/64x32to64x64skin3dmodel.sh output_minecraft_sk
     
 os.system(to3d_model_command)
 
-os.chdir("Scripts")
-
 filename_3d_model = "Scripts/3d_model_player.glb"
 gltf = GLTF2().load(filename_3d_model)
 
