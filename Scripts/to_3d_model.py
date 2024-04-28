@@ -7,7 +7,7 @@ import argparse
 
 # Create an argument parser
 parser = argparse.ArgumentParser(description='Process Minecraft skin and generate 3D model')
-parser.add_argument('filename_skin', help='Path to the Minecraft skin file to convert it from 64x32 to 64x64 to make it work on the 3d model view')
+parser.add_argument('filename_skin', type=str, help='Path to the Minecraft skin file to convert it from 64x32 to 64x64 to make it work on the 3d model view')
 
 os.chdir("..")
 
