@@ -4,10 +4,11 @@ from PIL import Image, ImageEnhance
 from pygltflib import GLTF2
 from pygltflib.utils import ImageFormat, Texture, Material, Image as GLTFImage
 
-to3d_model_command = f"sh 64x32to64x64skin3dmodel.sh output_minecraft_skins/{output_image_name}"
+os.chdir("..")
+
+to3d_model_command = f"sh Scripts/64x32to64x64skin3dmodel.sh output_minecraft_skins/{output_image_name}"
     
 os.system(to3d_model_command)
-
     
 filename = "Scripts/3d_model_player.glb"
 gltf = GLTF2().load(filename)
