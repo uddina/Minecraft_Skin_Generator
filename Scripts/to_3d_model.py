@@ -1,17 +1,20 @@
 import subprocess
 import os
+import sys
 from PIL import Image, ImageEnhance
 from pygltflib import GLTF2
 from pygltflib.utils import ImageFormat, Texture, Material, Image as GLTFImage
 
+filename = sys.argv[7]
+
 os.chdir("..")
 
-to3d_model_command = f"sh Scripts/64x32to64x64skin3dmodel.sh output_minecraft_skins/{output_image_name}"
+to3d_model_command = f"sh Scripts/64x32to64x64skin3dmodel.sh output_minecraft_skins/{filename}"
     
 os.system(to3d_model_command)
     
-filename = "Scripts/3d_model_player.glb"
-gltf = GLTF2().load(filename)
+filename_3d_model = "Scripts/3d_model_player.glb"
+gltf = GLTF2().load(filename_3d_model)
 
 # Step 1: Find the index of the existing texture you want to replace
 # Let's assume the texture you want to replace is at index 1 (you need to replace 1 with the actual index)
@@ -31,7 +34,7 @@ if existing_texture_index < len(gltf.textures):
     # Step 3: Add the new image and texture to the GLB
     # Create and add a new image to the glTF (same as before)
     new_image = GLTFImage()
-    new_image.uri = os.path.join(f"output_minecraft_skins/{output_image_name}-converted.png")
+    new_image.uri = os.path.join(f"output_minecraft_skins/{filename}-converted.png")
     gltf.images.append(new_image)
 
 
@@ -53,7 +56,7 @@ if existing_texture_index < len(gltf.textures):
     # Now you can convert the images to data URIs and save the updated GLB
     gltf.convert_images(ImageFormat.DATAURI)
 
-    output_3d_model = f"{output_image_name}_3d_model.glb"
+    output_3d_model = f"{filename}_3d_model.glb"
     gltf.save(output_3d_model)
 else:
     print("Invalid existing_texture_index")
