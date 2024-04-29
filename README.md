@@ -85,7 +85,7 @@ While closed source, this version improves on the quality of generated skins fro
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-- Run Gradio WEB UI **(WARNING: COULD RISK YOUR FREE TIER COLAB ACC)** <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_WEB_UI.ipynb">
+- Run WEB UI **(WARNING: COULD RISK YOUR FREE TIER COLAB ACC)** <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_WEB_UI.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
@@ -96,7 +96,7 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 - [Run NO UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/stable-diffusion-minecraft-skin-generator-no-ui/notebook)
 
-- [Run Gradio WEB UI **(WARNING: YOU COULD RISK YOUR KAGGLE ACCOUNT)** ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/stable-diffusion-minecraft-skin-generator-web-ui/notebook)
+- [Run WEB UI **(WARNING: YOU COULD RISK YOUR KAGGLE ACCOUNT)** ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/stable-diffusion-minecraft-skin-generator-web-ui/notebook)
 
 
 ## Changelog
