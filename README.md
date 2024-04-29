@@ -77,27 +77,31 @@ While closed source, this version improves on the quality of generated skins fro
 
 ### Google Colab
 
-#### NO UI
-Run <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_NO_UI.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-#### UI
-
-##### Ipywidgets
-Run <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_Ipywidgets_UI.ipynb">
+- Run NO UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_NO_UI.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-##### Gradio **(WARNING: COULD RISK YOUR FREE TIER COLAB ACC)**
-Run <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_Gradio_UI.ipynb">
+- Run Ipywidgets UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_Ipywidgets_UI.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
+- Run Gradio WEB UI **(WARNING: COULD RISK YOUR FREE TIER COLAB ACC)** <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_WEB_UI.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
 ### Hugging Face Space
 You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator), you can duplicate it by clicking the 3 dots in the right up corner and duplicate it on cpu to skip queue and also you can use your paid GPU to make it go faster
 
+### Kaggle
+
+- [Run NO UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/stable-diffusion-minecraft-skin-generator-no-ui/notebook)
+
+- [Run Gradio WEB UI **(WARNING: YOU COULD RISK YOUR KAGGLE ACCOUNT)** ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/stable-diffusion-minecraft-skin-generator-web-ui/notebook)
+
 
 ## Changelog
+### Update - April 29th, 2024
+Added Ngrok tunnel to the UI Colab, added kaggle notebooks (except for the ipywidgets UI as you wouldn't be able to see the output of the running command soo you wouldn't even know when the skin is running, done, or not lol)!
 ### Update - April 28th, 2024
 Add a way to see the skin in 3d model preview and also download it for all versions thanks to:
 - daroche (helping me fix the 3d model texture isue)
