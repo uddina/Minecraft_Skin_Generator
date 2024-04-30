@@ -126,7 +126,8 @@ The new model can be [downloaded from HuggingFace](https://huggingface.co/monadi
 - Author of the AI Model: Cory Spencer <cory@monadical.com>
 - Forked Improved Version: [Nick088](https://linktr.ee/Nick088)
 - daroche (helping me fix the 3d model texture isue)
-- [Brottweiler](https://gist.github.com/Brottweiler/483d0856c6692ef70cf90bf1a85ce364) (script to fix the 3d model texture
+- [Brottweiler](https://gist.github.com/Brottweiler/483d0856c6692ef70cf90bf1a85ce364) (script to fix the 3d model texture)
+- [not-holar](https://huggingface.co/not-holar) (made the rendering of the image in the ui look pixelated like minecraft and have a checkered background)
 - [meew](https://huggingface.co/spaces/meeww/Minecraft_Skin_Generator/blob/main/models/player_model.glb) (Minecraft Player 3d model)
 
 
