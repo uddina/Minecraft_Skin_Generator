@@ -100,8 +100,10 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 
 ## Changelog
+### Update - April 30th, 2024
+Added Cloudfare tunnel to the WEB UI ui colab and merged [not-holar pull request](https://huggingface.co/spaces/Nick088/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/discussions/2) to make the image asset display pixelated like minecraft instead of blurry and with a checked background for the web ui
 ### Update - April 29th, 2024
-Added Ngrok tunnel to the UI Colab, added kaggle notebooks (except for the ipywidgets UI as you wouldn't be able to see the output of the running command soo you wouldn't even know when the skin is running, done, or not lol)!
+Added Ngrok tunnel to the WEB UI Colab, added kaggle notebooks (except for the ipywidgets UI as you wouldn't be able to see the output of the running command soo you wouldn't even know when the skin is running, done, or not lol)!
 ### Update - April 28th, 2024
 Add a way to see the skin in 3d model preview and also download it for all versions thanks to:
 - daroche (helping me fix the 3d model texture isue)
@@ -127,7 +129,7 @@ The new model can be [downloaded from HuggingFace](https://huggingface.co/monadi
 - Forked Improved Version: [Nick088](https://linktr.ee/Nick088)
 - daroche (helping me fix the 3d model texture isue)
 - [Brottweiler](https://gist.github.com/Brottweiler/483d0856c6692ef70cf90bf1a85ce364) (script to fix the 3d model texture)
-- [not-holar](https://huggingface.co/not-holar) (made the rendering of the image in the web ui look pixelated like minecraft and have a checkered background)
+- [not-holar](https://huggingface.co/not-holar) (made the rendering of the image asset in the web ui look pixelated like minecraft and have a checkered background)
 - [meew](https://huggingface.co/spaces/meeww/Minecraft_Skin_Generator/blob/main/models/player_model.glb) (Minecraft Player 3d model)
 
 
