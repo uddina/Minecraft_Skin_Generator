@@ -100,6 +100,8 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 
 ## Changelog
+### Update - May 1st, 2024
+Added LocalTunnel Tunnel Option for UI Colab & Kaggle.
 ### Update - April 30th, 2024
 Added Cloudfare tunnel to the WEB UI ui colab and merged [not-holar pull request](https://huggingface.co/spaces/Nick088/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/discussions/2) to make the image asset display pixelated like minecraft instead of blurry and with a checked background for the web ui
 ### Update - April 29th, 2024
