@@ -158,3 +158,5 @@ if __name__ == "__main__":
         command_3d_model = f"python to_3d_model.py '{filename}'"
         os.system(command_3d_model)
         os.chdir("..")
+
+    print("Sucessfully generated the skin!")
