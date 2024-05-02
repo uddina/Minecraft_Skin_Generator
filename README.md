@@ -95,35 +95,32 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 ### Kaggle
 
 - [Run NO UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/stable-diffusion-minecraft-skin-generator-no-ui/notebook)
-
+- [Run Ipywidgets UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/sd-finetuned-minecraft-skin-generator-ipywidgetsui)
 - [Run WEB UI **(WARNING: YOU COULD RISK YOUR KAGGLE ACCOUNT)** ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/stable-diffusion-minecraft-skin-generator-web-ui/notebook)
 
 
 ## Changelog
+### Update - May 3rd, 2024
+Added Ipywidgets UI Kaggle Notebook.
 ### Update - May 1st, 2024
 Added LocalTunnel Tunnel Option for UI Colab & Kaggle.
 ### Update - April 30th, 2024
 Added Cloudfare tunnel to the WEB UI ui colab and merged [not-holar pull request](https://huggingface.co/spaces/Nick088/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/discussions/2) to make the image asset display pixelated like minecraft instead of blurry and with a checked background for the web ui
 ### Update - April 29th, 2024
-Added Ngrok tunnel to the WEB UI Colab, added kaggle notebooks (except for the ipywidgets UI as you wouldn't be able to see the output of the running command soo you wouldn't even know when the skin is running, done, or not lol)!
+Added Ngrok tunnel to the WEB UI Colab, added kaggle WEB & NO UI notebooks!
 ### Update - April 28th, 2024
 Add a way to see the skin in 3d model preview and also download it for all versions thanks to:
 - daroche (helping me fix the 3d model texture isue)
 - [Brottweiler](https://gist.github.com/Brottweiler/483d0856c6692ef70cf90bf1a85ce364) (script to fix the 3d model texture
 - [meew](https://huggingface.co/spaces/meeww/Minecraft_Skin_Generator/blob/main/models/player_model.glb) (Minecraft Player 3d model)
-
 ### Update - April 13th, 2024
 Nick088 improved the local installation
-
 ### Update - April 12th, 2024
 Nick088 made the Hugging Face Space and the Google Colab agradio Ui (based on the hf space)
-
 ### Update - April 11th, 2024
-Nick088 Forked this repository and uploaded an updated version of the 2 py scripts with more features and uploaded the Google Colabs to run this model for free on the CPU (slower) or Free Daily Colab T4 Gpu!
-
+Nick088 Forked this repository and uploaded an updated version of the 2 py scripts with more features and uploaded the Google Colabs to run this model for free on the CPU (slower) or Free Daily Colab T4 Gpu
 ### 💥 Update - February 19th, 2024 💥
 We have released a new open sourced Minecraft Skin Generator XL model based on Stable Diffusion XL. It offers many improvements over the original model, including support for the transparency layer.
-
 The new model can be [downloaded from HuggingFace](https://huggingface.co/monadical-labs/minecraft-skin-generator-sdxl), or see below for commandline usage via the minecraft-skins-sdxl.py script.
 
 ## Credits
