@@ -23,7 +23,7 @@ if not exist "%~dp0venv_no_ui\" (
 ) else (
     echo Required packages are already installed and Virtual environment is already created.
 	
-	REM Print the step to the terminal
+    REM Print the step to the terminal
     echo Activating the virtual environment...
 
     REM Activate the virtual environment
