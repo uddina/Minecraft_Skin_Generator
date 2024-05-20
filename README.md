@@ -8,6 +8,8 @@ The process of fine tuning a Stable Diffusion model to generate Minecraft charac
 
 This codebase further refines that model, and allows for in-game skins to be generated using only a text prompt.  The finetuned model for doing so is available on HuggingFace as [monadical-labs/minecraft-skin-generator](https://huggingface.co/monadical-labs/minecraft-skin-generator).  The model development process is described here in a subsequant blog post: [Even More Skin in the Game: Digging Deeper Into Stable Diffusion-Generated Minecraft Skins](https://monadical.com/posts/minecraft-skins-part2.html).
 
+If you want to finetune this model, check [here](https://docs.monadical.com/zzthlWvuSj-PXyN4ZZiCyg#Fine-tuning-the-Stable-Diffusion-model)
+
 ## Example
 
 Prompt: "A man in a purple suit wearing a tophat"
