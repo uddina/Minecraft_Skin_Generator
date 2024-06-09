@@ -4,7 +4,7 @@ protobuf
 accelerate
 sentencepiece
 transformers
-gradio==3.1.7
+gradio==4.36.0
 diffusers
 Pillow===9.0.1
 pygltflib
