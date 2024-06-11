@@ -13,7 +13,7 @@ REQUIREMENTS_FILE="$(dirname "$0")/Scripts/requirements_no_ui.txt"
 RUN_SCRIPT_FILE="$(dirname "$0")/Scripts/Run_Inference_NO_UI.py"
 
 # Check if venv_ui folder exists in the root directory
-if [ ! -d "$(dirname "$0")/venv_ui" ]; then
+if [ ! -d "$(dirname "$0")/venv_no_ui" ]; then
     echo "Creating virtual environment..."
     # Create a virtual environment named "venv_ui" in the root directory
     if [[ "$OSTYPE" == "linux-gnu"* || "$OSTYPE" == "darwin"* ]]; then
