@@ -40,9 +40,17 @@ Skin Imported In Game:
 
 4. Choose which version:
 
-- UI: Open Run_Inference_UI.bat, let it create the venv_ui and install the requirements. After that ctrl+click the local url.
+- Windows:
 
-- NO UI: Open Run_Inference_NO_UI.bat, let it create the venv_no_ui and install the requirements, it will ask you for the parameters to set that are explained below
+  - UI: Open Run_Inference_UI.bat, let it create the venv_ui and install the requirements. After that ctrl+click the local url.
+
+  - NO UI: Open Run_Inference_NO_UI.bat, let it create the venv_no_ui and install the requirements, it will ask you for the parameters to set that are explained below
+
+- Mac & Linux
+
+  - UI: Open Run_Inference_UI.sh, let it create the venv_ui and install the requirements. After that ctrl+click the local url.
+
+  - NO UI: Open Run_Inference_NO_UI.sh, let it create the venv_no_ui and install the requirements, it will ask you for the parameters to set that are explained below
 
 A: Enter the prompt, so how the Minecraft Skins should look like.
 
