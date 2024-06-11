@@ -110,6 +110,8 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 
 ## Changelog
+### Update - June 11th, 2024
+Added Mac & Linux Local Support.
 ### Update - May 3rd, 2024
 Added Ipywidgets UI Kaggle Notebook.
 ### Update - May 1st, 2024
