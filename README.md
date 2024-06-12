@@ -56,13 +56,13 @@ A: Enter the prompt, so how the Minecraft Skins should look like.
 
 B: Choose the Stable Diffusion Model, either 2 or xl (xl is better).
 
-C: Enter the integer value for the Inference Steps, which is basically denoising the image so an higher value = better output but longer process.
+C: Enter the integer value for the Inference Steps, which is basically denoising the image so an higher value = better output but longer process, it's suggested to use either 25 or 50.
 
-D: Enter the guidance scale, the float value for how much the output is adherent to the prompt.
+D: Enter the guidance scale, the float value for how much the output is adherent to the prompt, the 'max' is 10.0.
 
 E: Enter the model precision type,fp16 (which is faster) or fp32 (which is more precise but slower and need more resources).
 
-F: Put the Seed, the starting point to initiate the generation process, either an integer value or 0 for a random one.
+F: Put the Seed, the starting point to initiate the generation process, either an integer value or 0 for a random one, max is 2147483647.
 
 G: Write the Output Image Skin Asset Name with the .png extension.
 
