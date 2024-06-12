@@ -2,8 +2,8 @@ import subprocess
 import os
 import gradio as gr
 import torch
+import numpy as np
 from PIL import Image, ImageEnhance
-import spaces
 
 
 if torch.cuda.is_available():
@@ -14,12 +14,14 @@ else:
     print("Using CPU")
 
 
+MAX_SEED = np.iinfo(np.int32).max
+
+
 subprocess.run(["git", "clone", "https://github.com/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator.git"])
 
 os.chdir("Stable_Diffusion_Finetuned_Minecraft_Skin_Generator")
 
 
-@spaces.GPU()
 def run_inference(prompt, stable_diffusion_model, num_inference_steps, guidance_scale, model_precision_type, seed, filename, verbose, see_in_3d):
 
     # inference
@@ -49,12 +51,12 @@ def run_inference(prompt, stable_diffusion_model, num_inference_steps, guidance_
 # Define Gradio UI components
 prompt = gr.Textbox(label="Your Prompt", info="What the Minecraft Skin should look like")
 stable_diffusion_model = gr.Dropdown(['2', 'xl'], value="xl", label="Stable Diffusion Model", info="Choose which Stable Diffusion Model to use, xl understands prompts better")
-num_inference_steps = gr.Number(label="Number of Inference Steps", precision=0, value=25)
-guidance_scale = gr.Number(minimum=0.1, value=7.5, label="Guidance Scale", info="The number of denoising steps of the image. More denoising steps usually lead to a higher quality image at the cost of slower inference")
+num_inference_steps = gr.Slider(label="Number of Inference Steps", info="The number of denoising steps of the image. More denoising steps usually lead to a higher quality image at the cost of slower inference", minimum=1, maximum=50, value=25, step=1)
+guidance_scale = gr.Slider(label="Guidance Scale", info="Controls how much the image generation process follows the text prompt. Higher values make the image stick more closely to the input text.", minimum=0.0, maximum=10.0, value=7.5, step=0.1)
 model_precision_type = gr.Dropdown(["fp16", "fp32"], value="fp16", label="Model Precision Type", info="The precision type to load the model, like fp16 which is faster, or fp32 which is more precise but more resource consuming")
-seed = gr.Number(value=42, label="Seed", info="A starting point to initiate generation, put 0 for a random one")
+seed = gr.Slider(value=42, minimum=0, maximum=MAX_SEED, step=1, label="Seed", info="A starting point to initiate the generation process, put 0 for a random one")
 filename = gr.Textbox(label="Output Image Name", info="The name of the file of the output image skin, keep the.png", value="output-skin.png")
-see_in_3d = gr.Checkbox(label="See in 3D", info="View the generated skin as a £D Model", value=True)
+see_in_3d = gr.Checkbox(label="See in 3D", info="View the generated skin as a 3D Model", value=True)
 verbose = gr.Checkbox(label="Verbose Output", info="Produce more detailed output while running", value=False)
 
 
