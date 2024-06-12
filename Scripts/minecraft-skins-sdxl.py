@@ -122,7 +122,7 @@ def extract_minecraft_skin(generated_image, cutoff=50):
 
     return transparent_skin
 
-def main(prompt, num_inference_steps, guidance_scale, model_precision_type, seed, num_images_per_prompt, filename, logger):
+def main(prompt, num_inference_steps, guidance_scale, model_precision_type, seed, filename, logger):
     # Enable GPU acceleration frameworks, if enabled.
 
     if model_precision_type == "fp16":
@@ -167,7 +167,7 @@ def main(prompt, num_inference_steps, guidance_scale, model_precision_type, seed
         height=768,
         width=768,
         guidance_scale=guidance_scale,
-        num_images_per_prompt=num_images_per_prompt,
+        num_images_per_prompt=1,
         seed=seed
     ).images[0]
 
