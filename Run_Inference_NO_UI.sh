@@ -10,7 +10,6 @@ else
 fi
 
 REQUIREMENTS_FILE="$(dirname "$0")/Scripts/requirements_no_ui.txt"
-RUN_SCRIPT_FILE="$(dirname "$0")/Scripts/Run_Inference_NO_UI.py"
 
 # Check if venv_ui folder exists in the root directory
 if [ ! -d "$(dirname "$0")/venv_no_ui" ]; then
@@ -35,7 +34,37 @@ pip install -r "$REQUIREMENTS_FILE"
 
 echo "Running Python script..."
 # Run your Python file here
-python "$RUN_SCRIPT_FILE"
+#!/bin/bash
+
+read -p "Enter your prompt: " prompt
+read -p "Enter the Stable Diffusion Model Version (2/xl, xl understands better prompts): " sd_model
+read -p "Enter the number of inference steps (more integer value = better but longer process): " num_inference_steps
+read -p "Enter the guidance scale (how much the output adheres to the prompt): " guidance_scale
+read -p "Enter the model precision type (fp16 for faster or fp32 for more precision): " model_precision_type
+read -p "Enter the seed (an integer or 0 for random): " seed
+read -p "Enter the output filename with .png extension: " filename
+read -p "See the skin also as a 3D Model? (y/n): " model_3d
+read -p "Produce Verbose (detailed) Output? (y/n): " verbose
+
+if [[ "$sd_model" == "2" ]]; then
+    sd_model_version="minecraft-skins"
+else
+    sd_model_version="minecraft-skins-sdxl"
+fi
+
+if [[ "$verbose" == "y" ]]; then
+    verbose_flag="--verbose"
+else
+    verbose_flag=""
+fi
+
+if [[ "$model_3d" == "y" ]]; then
+    model_3d_flag="--model_3d"
+else
+    model_3d_flag=""
+fi
+
+python Scripts/"$sd_model_version".py "$prompt" "$num_inference_steps" "$guidance_scale" "$model_precision_type" "$seed" "$filename" "$model_3d_flag" "$verbose_flag"
 
 echo "Deactivating the virtual environment..."
 # Deactivate the virtual environment
