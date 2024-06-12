@@ -110,6 +110,8 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 
 ## Changelog
+### Update - June 12-13th, 2024
+Fixed UI Inference py script, fixed no ui shell script, adjusted the ui parameters.
 ### Update - June 11th, 2024
 Added Mac & Linux Local Support.
 ### Update - May 3rd, 2024
