@@ -1,4 +1,5 @@
 torch
+numpy
 scipy
 protobuf
 accelerate
