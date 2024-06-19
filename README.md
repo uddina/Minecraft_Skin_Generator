@@ -104,12 +104,20 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 ### Kaggle
 
-- [Run NO UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/stable-diffusion-minecraft-skin-generator-no-ui/notebook)
-- [Run Ipywidgets UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/sd-finetuned-minecraft-skin-generator-ipywidgetsui)
-- [Run WEB UI **(WARNING: YOU COULD RISK YOUR KAGGLE ACCOUNT)** ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nick088/stable-diffusion-minecraft-skin-generator-web-ui/notebook)
+- [Run NO UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://github.com/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/kaggle-stable-diffusion-minecraft-skin-generator-no-ui.ipynb)
+- [Run Ipywidgets UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://github.com/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/kaggle-sd-finetuned-minecraft-skin-generator-ipywidgetsui.ipynb)
+- [Run WEB UI **(WARNING: YOU COULD RISK YOUR KAGGLE ACCOUNT)** ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://github.com/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/kaggle-stable-diffusion-minecraft-skin-generator-web-ui.ipynb)
+
+1. Download one of the 2 Kaggle Notebooks Files above
+2. Go on https://kaggle.com, be sure you make an account and are phone verified.
+3. Click the '+', then 'Create new notebook'.
+4. Click 'File' and 'Import Notebook'.
+5. Import the kaggle notebook file.
 
 
 ## Changelog
+### Update - June 19th, 2024
+Kaggle Notebook Files.
 ### Update - June 12-13th, 2024
 Fixed UI Inference py script, fixed no ui shell script, adjusted the ui parameters.
 ### Update - June 11th, 2024
