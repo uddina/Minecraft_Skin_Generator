@@ -116,6 +116,8 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 
 ## Changelog
+### Update - September 20th, 2024
+Fix typo on the WEB UI Colab.
 ### Update - June 19th, 2024
 Kaggle Notebook Files.
 ### Update - June 12-13th, 2024
