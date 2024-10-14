@@ -100,7 +100,10 @@ While closed source, this version improves on the quality of generated skins fro
 </a>
 
 ### Hugging Face Space
-You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator), you can duplicate it by clicking the 3 dots in the right up corner and duplicate it on cpu to skip queue and also you can use your paid GPU to make it go faster
+
+[**YOUTUBE TUTORIAL**](https://www.youtube.com/watch?v=aqAI7_WJkDA)
+
+[Hugging Face Space](https://huggingface.co/spaces/Nick088/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator)
 
 ### Kaggle
 
@@ -116,6 +119,8 @@ You can use the [Hugging Face Space](https://huggingface.co/spaces/Nick088/Stabl
 
 
 ## Changelog
+### Update - October 14th, 2024
+Added a Youtube Tutorial for the (ZeroGPU) HuggingFace Space.
 ### Update - September 20th, 2024
 Fix typo on the WEB UI Colab.
 ### Update - June 19th, 2024
