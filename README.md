@@ -23,7 +23,7 @@ Skin Imported In Game:
 ![images/minecraft-screenshot.png](images/minecraft-screenshot.png)
 
 # Requirements:
-- [Python (3.10.6 or more)](https://www.python.org/downloads/)
+- [Python (3.10.6, below 3.11)](https://www.python.org/downloads/)
 - [ImageMagick (ONLY IF YOU WANNA SEE THE GENERATED SKIN AS 3D MODEL)](https://imagemagick.org/script/download.php)
 
 # Usage
