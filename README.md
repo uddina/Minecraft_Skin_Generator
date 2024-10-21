@@ -119,6 +119,8 @@ While closed source, this version improves on the quality of generated skins fro
 
 
 ## Changelog
+### Update - October 21th, 2024
+Fixed Kaggle & Google Colab Web UI.
 ### Update - October 14th, 2024
 Added a Youtube Tutorial for the (ZeroGPU) HuggingFace Space.
 ### Update - September 20th, 2024
