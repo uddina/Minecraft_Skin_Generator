@@ -23,7 +23,7 @@ Skin Imported In Game:
 ![images/minecraft-screenshot.png](images/minecraft-screenshot.png)
 
 # Requirements:
-- [Python (3.10.6, below 3.11)](https://www.python.org/downloads/)
+- [Python (3.10.6+)](https://www.python.org/downloads/)
 - [ImageMagick (ONLY IF YOU WANNA SEE THE GENERATED SKIN AS 3D MODEL)](https://imagemagick.org/script/download.php)
 
 # Usage
@@ -120,7 +120,7 @@ While closed source, this version improves on the quality of generated skins fro
 
 ## Changelog
 ### Update - October 21th, 2024
-Fixed Kaggle & Google Colab Web UI.
+Fixed Kaggle & Google Colab Web UI, updated gradio from 4.36.0 to 4.41.0 for fixing localtunnel issues, and update Pillow from 9.0.1 to 10.4.0 to fix incompatibility with python 3.11.
 ### Update - October 14th, 2024
 Added a Youtube Tutorial for the (ZeroGPU) HuggingFace Space.
 ### Update - September 20th, 2024
