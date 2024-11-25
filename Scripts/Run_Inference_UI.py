@@ -6,14 +6,6 @@ import numpy as np
 from PIL import Image, ImageEnhance
 
 
-if torch.cuda.is_available():
-    device = "cuda"
-    print("Using GPU")
-else:
-    device = "cpu"
-    print("Using CPU")
-
-
 MAX_SEED = np.iinfo(np.int32).max
 
 
