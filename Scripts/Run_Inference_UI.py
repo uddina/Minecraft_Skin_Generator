@@ -17,11 +17,6 @@ else:
 MAX_SEED = np.iinfo(np.int32).max
 
 
-subprocess.run(["git", "clone", "https://github.com/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator.git"])
-
-os.chdir("Stable_Diffusion_Finetuned_Minecraft_Skin_Generator")
-
-
 def run_inference(prompt, stable_diffusion_model, num_inference_steps, guidance_scale, model_precision_type, seed, filename, verbose, see_in_3d):
 
     # inference
