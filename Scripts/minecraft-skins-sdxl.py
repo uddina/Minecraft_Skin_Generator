@@ -132,16 +132,16 @@ def main(prompt, num_inference_steps, guidance_scale, model_precision_type, seed
 
     if torch.cuda.is_available() and torch.backends.cuda.is_built():
         # A CUDA compatible GPU was found.
-        logger.info("CUDA device found, enabling.")
         device = "cuda"
+        print("CUDA device found, enabling.")
     elif torch.backends.mps.is_available() and torch.backends.mps.is_built():
         # Apple M1/M2 machines have the MPS framework.
-        logger.info("Apple MPS device found, enabling.")
         device = "mps"
+        print("Apple MPS device found, enabling.")
     else:
         # Else we're defaulting to CPU.
         device = "cpu"
-        logger.info("No CUDA or MPS devices found, running on CPU.")
+        print("No CUDA or MPS devices found, running on CPU.")
 
     # Load (and possibly download) our Minecraft model.
     logger.info("Loading HuggingFace model: '{}'.".format(MODEL_NAME))
