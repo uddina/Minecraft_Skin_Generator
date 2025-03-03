@@ -122,11 +122,11 @@ While closed source, this version improves on the quality of generated skins fro
 
 ## Changelog
 ### March 3rd, 2025
-Changed the name of everything from "Stable_Diffusion_Finetuned_Minecraft_Skin_Generator" to just "Minecraft_Skin_Generator" after realizing the name was pretty much long lol
+Changed the name of everything from "Stable_Diffusion_Finetuned_Minecraft_Skin_Generator" to just "Minecraft_Skin_Generator" after realizing the name was pretty much long lol and update Pillow from 9.0.1 to 10.4.0 to fix incompatibility with python 3.11 in the no ui requirements which I accidentally forgot
 ### October 21th, 2024
 Updated Gradio from 4.41.0 to 5.6.0, added Horizon Tunnel to Colab & Kaggle WEB UI and made them based on the GitHub rather the HuggingFace Space, removed device check when starting UI and print the device check when doing actual inference.
 ### October 21th, 2024
-Fixed Kaggle & Google Colab Web UI, updated gradio from 4.36.0 to 4.41.0 for fixing localtunnel issues, and update Pillow from 9.0.1 to 10.4.0 to fix incompatibility with python 3.11.
+Fixed Kaggle & Google Colab Web UI, updated gradio from 4.36.0 to 4.41.0 for fixing localtunnel issues, and update Pillow from 9.0.1 to 10.4.0 to fix incompatibility with python 3.11 in the web ui requirements.
 ### October 14th, 2024
 Added a Youtube Tutorial for the (ZeroGPU) HuggingFace Space.
 ### September 20th, 2024
