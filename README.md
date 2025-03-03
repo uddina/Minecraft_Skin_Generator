@@ -1,8 +1,10 @@
-# Stable Diffusion Minecraft Skin Generator
+# Minecraft Skin Generator
 
 [![Discord](https://img.shields.io/discord/1198701940511617164?color=%23738ADB&label=Discord&style=for-the-badge)](https://discord.gg/Xw7yc2jA9w))
 
 ## Overview
+
+This project uses a Fine Tuned version AI Stable Diffusion trained on Minecraft Skins!
 
 The process of fine tuning a Stable Diffusion model to generate Minecraft character previews is detailed here: [Digging into Stable Diffusion-Generated Minecraft Skins](https://monadical.com/posts/mincraft-skin-generation.html).
 
@@ -87,15 +89,15 @@ While closed source, this version improves on the quality of generated skins fro
 
 ### Google Colab
 
-- Run NO UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_NO_UI.ipynb">
+- Run NO UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Minecraft_Skin_Generator/blob/main/Minecraft_Skin_Generator_NO_UI.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-- Run Ipywidgets UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_Ipywidgets_UI.ipynb">
+- Run Ipywidgets UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Minecraft_Skin_Generator/blob/main/Minecraft_Skin_Generator_Ipywidgets_UI.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-- Run WEB UI **(WARNING: COULD RISK YOUR FREE TIER COLAB ACC)** <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator_WEB_UI.ipynb">
+- Run WEB UI **(WARNING: COULD RISK YOUR FREE TIER COLAB ACC)** <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/Minecraft_Skin_Generator/blob/main/Minecraft_Skin_Generator_WEB_UI.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
@@ -103,13 +105,13 @@ While closed source, this version improves on the quality of generated skins fro
 
 [**YOUTUBE TUTORIAL**](https://www.youtube.com/watch?v=aqAI7_WJkDA)
 
-[Hugging Face Space](https://huggingface.co/spaces/Nick088/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator)
+[Hugging Face Space](https://huggingface.co/spaces/Nick088/Minecraft_Skin_Generator)
 
 ### Kaggle
 
-- [Run NO UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://github.com/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/kaggle-stable-diffusion-minecraft-skin-generator-no-ui.ipynb)
-- [Run Ipywidgets UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://github.com/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/kaggle-sd-finetuned-minecraft-skin-generator-ipywidgetsui.ipynb)
-- [Run WEB UI **(WARNING: YOU COULD RISK YOUR KAGGLE ACCOUNT)** ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://github.com/Nick088Official/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/blob/main/kaggle-stable-diffusion-minecraft-skin-generator-web-ui.ipynb)
+- [Run NO UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://github.com/Nick088Official/Minecraft_Skin_Generator/blob/main/kaggle-minecraft-skin-generator-no-ui.ipynb)
+- [Run Ipywidgets UI ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://github.com/Nick088Official/Minecraft_Skin_Generator/blob/main/kaggle-minecraft-skin-generator-ipywidgetsui.ipynb)
+- [Run WEB UI **(WARNING: YOU COULD RISK YOUR KAGGLE ACCOUNT)** ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://github.com/Nick088Official/Minecraft_Skin_Generator/blob/main/kaggle-minecraft-skin-generator-web-ui.ipynb)
 
 1. Download one of the 2 Kaggle Notebooks Files above
 2. Go on https://kaggle.com, be sure you make an account and are phone verified.
@@ -119,40 +121,42 @@ While closed source, this version improves on the quality of generated skins fro
 
 
 ## Changelog
-### Update - October 21th, 2024
+### March 3rd, 2025
+Changed the name of everything from "Stable_Diffusion_Finetuned_Minecraft_Skin_Generator" to just "Minecraft_Skin_Generator" after realizing the name was pretty much long lol
+### October 21th, 2024
 Updated Gradio from 4.41.0 to 5.6.0, added Horizon Tunnel to Colab & Kaggle WEB UI and made them based on the GitHub rather the HuggingFace Space, removed device check when starting UI and print the device check when doing actual inference.
-### Update - October 21th, 2024
+### October 21th, 2024
 Fixed Kaggle & Google Colab Web UI, updated gradio from 4.36.0 to 4.41.0 for fixing localtunnel issues, and update Pillow from 9.0.1 to 10.4.0 to fix incompatibility with python 3.11.
-### Update - October 14th, 2024
+### October 14th, 2024
 Added a Youtube Tutorial for the (ZeroGPU) HuggingFace Space.
-### Update - September 20th, 2024
+### September 20th, 2024
 Fix typo on the WEB UI Colab.
-### Update - June 19th, 2024
+### June 19th, 2024
 Kaggle Notebook Files.
-### Update - June 12-13th, 2024
+### June 12-13th, 2024
 Fixed UI Inference py script, fixed no ui shell script, adjusted the ui parameters.
-### Update - June 11th, 2024
+### June 11th, 2024
 Added Mac & Linux Local Support.
-### Update - May 3rd, 2024
+### May 3rd, 2024
 Added Ipywidgets UI Kaggle Notebook.
-### Update - May 1st, 2024
+### May 1st, 2024
 Added LocalTunnel Tunnel Option for UI Colab & Kaggle.
-### Update - April 30th, 2024
-Added Cloudfare tunnel to the WEB UI ui colab and merged [not-holar pull request](https://huggingface.co/spaces/Nick088/Stable_Diffusion_Finetuned_Minecraft_Skin_Generator/discussions/2) to make the image asset display pixelated like minecraft instead of blurry and with a checked background for the web ui
-### Update - April 29th, 2024
+### April 30th, 2024
+Added Cloudfare tunnel to the WEB UI ui colab and merged [not-holar pull request](https://huggingface.co/spaces/Nick088/Minecraft_Skin_Generator/discussions/2) to make the image asset display pixelated like minecraft instead of blurry and with a checked background for the web ui
+### April 29th, 2024
 Added Ngrok tunnel to the WEB UI Colab, added kaggle WEB & NO UI notebooks!
-### Update - April 28th, 2024
+### April 28th, 2024
 Add a way to see the skin in 3d model preview and also download it for all versions thanks to:
 - daroche (helping me fix the 3d model texture isue)
 - [Brottweiler](https://gist.github.com/Brottweiler/483d0856c6692ef70cf90bf1a85ce364) (script to fix the 3d model texture
 - [meew](https://huggingface.co/spaces/meeww/Minecraft_Skin_Generator/blob/main/models/player_model.glb) (Minecraft Player 3d model)
-### Update - April 13th, 2024
+### April 13th, 2024
 Nick088 improved the local installation
-### Update - April 12th, 2024
+### April 12th, 2024
 Nick088 made the Hugging Face Space and the Google Colab agradio Ui (based on the hf space)
-### Update - April 11th, 2024
+### April 11th, 2024
 Nick088 Forked this repository and uploaded an updated version of the 2 py scripts with more features and uploaded the Google Colabs to run this model for free on the CPU (slower) or Free Daily Colab T4 Gpu
-### 💥 Update - February 19th, 2024 💥
+### 💥 February 19th, 2024 💥
 We have released a new open sourced Minecraft Skin Generator XL model based on Stable Diffusion XL. It offers many improvements over the original model, including support for the transparency layer.
 The new model can be [downloaded from HuggingFace](https://huggingface.co/monadical-labs/minecraft-skin-generator-sdxl), or see below for commandline usage via the minecraft-skins-sdxl.py script.
 
