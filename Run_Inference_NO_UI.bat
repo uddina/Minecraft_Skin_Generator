@@ -51,20 +51,20 @@ if /i "%sd_model%"=="2" (
     set sd_model_version=minecraft-skins-sdxl
 )
 
+REM Initialize flag variables as empty strings.
+set "verbose_flag="
+set "model_3d_flag="
 
 if /i "%verbose%"=="y" (
     set verbose_flag=--verbose
-) else (
-    set verbose_flag=
 )
 
 if /i "%model_3d%"=="y" (
     set model_3d_flag=--model_3d
-) else (
-    set model_3d_flag=
 )
 
-python Scripts/%sd_model_version%.py "\"%prompt%\"" %num_inference_steps% %guidance_scale% %model_precision_type% %seed% "%filename%" %model_3d% %verbose_flag%
+
+python Scripts/%sd_model_version%.py "%prompt%" %num_inference_steps% %guidance_scale% %model_precision_type% %seed% "%filename%" %model_3d_flag% %verbose_flag%
 
 REM Print the step to the terminal
 echo Deactivating the virtual environment...
@@ -77,4 +77,4 @@ echo Script execution complete.
 
 endlocal
 
-pause /k
+pause
