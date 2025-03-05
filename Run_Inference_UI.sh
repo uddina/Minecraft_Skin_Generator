@@ -4,9 +4,6 @@
 if [[ "$OSTYPE" == "linux-gnu"* || "$OSTYPE" == "darwin"* ]]; then
     # Unix-like system
     VENV_ACTIVATE="$(dirname "$0")/venv_ui/bin/activate"
-else
-    # Windows system
-    VENV_ACTIVATE="$(dirname "$0")/venv_ui/Scripts/activate"
 fi
 
 REQUIREMENTS_FILE="$(dirname "$0")/Scripts/requirements_ui.txt"
@@ -32,8 +29,6 @@ echo "Installing requirements..."
 # Install requirements inside the virtual environment
 pip install -r "$REQUIREMENTS_FILE"
 
-# Export the Hugging Face Read Token as an environment variable
-export HUGGINGFACE_READ_TOKEN
 
 echo "Running Python script..."
 # Run your Python file here

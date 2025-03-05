@@ -3,22 +3,19 @@
 # Detect OS and set paths accordingly
 if [[ "$OSTYPE" == "linux-gnu"* || "$OSTYPE" == "darwin"* ]]; then
     # Unix-like system
-    VENV_ACTIVATE="$(dirname "$0")/venv_ui/bin/activate"
-else
-    # Windows system
-    VENV_ACTIVATE="$(dirname "$0")/venv_ui/Scripts/activate"
+    VENV_ACTIVATE="$(dirname "$0")/venv_no_ui/bin/activate"
 fi
 
 REQUIREMENTS_FILE="$(dirname "$0")/Scripts/requirements_no_ui.txt"
 
-# Check if venv_ui folder exists in the root directory
+# Check if venv_no_ui folder exists in the root directory
 if [ ! -d "$(dirname "$0")/venv_no_ui" ]; then
     echo "Creating virtual environment..."
-    # Create a virtual environment named "venv_ui" in the root directory
+    # Create a virtual environment named "venv_no_ui" in the root directory
     if [[ "$OSTYPE" == "linux"* || "$OSTYPE" == "darwin"* ]]; then
-        python3 -m venv "$(dirname "$0")/venv_ui"
+        python3 -m venv "$(dirname "$0")/venv_no_ui"
     else
-        python -m venv "$(dirname "$0")/venv_ui"
+        python -m venv "$(dirname "$0")/venv_no_ui"
     fi
 fi
 
@@ -33,8 +30,6 @@ pip install -r "$REQUIREMENTS_FILE"
 
 
 echo "Running Python script..."
-# Run your Python file here
-#!/bin/bash
 
 read -p "Enter your prompt: " prompt
 read -p "Enter the Stable Diffusion Model Version (2/xl, xl understands better prompts): " sd_model
@@ -52,17 +47,19 @@ else
     sd_model_version="minecraft-skins-sdxl"
 fi
 
+
+# Initialize flag variables as empty strings.
+verbose_flag=""
+model_3d_flag=""
+
 if [[ "$verbose" == "y" ]]; then
     verbose_flag="--verbose"
-else
-    verbose_flag=""
 fi
 
 if [[ "$model_3d" == "y" ]]; then
     model_3d_flag="--model_3d"
-else
-    model_3d_flag=""
 fi
+
 
 python Scripts/"$sd_model_version".py "$prompt" "$num_inference_steps" "$guidance_scale" "$model_precision_type" "$seed" "$filename" "$model_3d_flag" "$verbose_flag"
 
