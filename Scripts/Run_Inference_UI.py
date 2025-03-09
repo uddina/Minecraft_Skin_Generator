@@ -4,6 +4,32 @@ import gradio as gr
 import torch
 import numpy as np
 from PIL import Image, ImageEnhance
+from argparse import ArgumentParser
+
+
+# cli arguments
+if __name__ == "__main__":
+    parser = ArgumentParser(
+       description="Generate Minecraft Skins with Stable Diffusion Finetuned Models",
+       epilog="Example: python app.py --share --listen-port 0088 --open"
+    )
+    parser.add_argument(
+       "--share",
+       action="store_true",
+       help="Enable sharing of the interface through Gradio's temporary Public URLs"
+    )
+    parser.add_argument(
+       "--listen-port",
+       type=int,
+       default=7860,
+       help="The listening port that the server will use (default: 7860)"
+    )
+    parser.add_argument(
+       "--open",
+       action="store_true",
+       help="Automatically open the interface in the default web browser"
+    )   
+    args = parser.parse_args()
 
 
 MAX_SEED = np.iinfo(np.int32).max
@@ -68,4 +94,9 @@ gr.Interface(
     title="Minecraft Skin Generator",
     description="Make AI generated Minecraft Skins by a Finetuned Stable Diffusion Version!<br>Github Repository & Model used: https://github.com/Nick088Official/Minecraft_Skin_Generator<br>Credits: [Monadical-SAS](https://github.com/Monadical-SAS/minecraft_skin_generator) (Creators of the model), [Nick088](https://linktr.ee/Nick088) (Improving usage of the model), daroche (helping me fix the 3d model texture isue), [Brottweiler](https://gist.github.com/Brottweiler/483d0856c6692ef70cf90bf1a85ce364)(script to fix the 3d model texture, [meew](https://huggingface.co/spaces/meeww/Minecraft_Skin_Generator/blob/main/models/player_model.glb) (Minecraft Player 3d model)",
     css=".pixelated {image-rendering: pixelated} .checkered img {background-image: url(\'data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"2\" height=\"2\" fill-opacity=\".15\"><rect x=\"1\" width=\"1\" height=\"1\"/><rect y=\"1\" width=\"1\" height=\"1\"/></svg>\');background-size: 16px;}"
-).launch(show_api=False, share=False)
+).launch(
+    share=args.share,
+    favicon_path="assets/favicon.ico",
+    server_port=args.listen_port,
+    inbrowser=args.open
+)
