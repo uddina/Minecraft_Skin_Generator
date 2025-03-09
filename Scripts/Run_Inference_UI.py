@@ -96,7 +96,7 @@ gr.Interface(
     css=".pixelated {image-rendering: pixelated} .checkered img {background-image: url(\'data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"2\" height=\"2\" fill-opacity=\".15\"><rect x=\"1\" width=\"1\" height=\"1\"/><rect y=\"1\" width=\"1\" height=\"1\"/></svg>\');background-size: 16px;}"
 ).launch(
     share=args.share,
-    favicon_path="assets/favicon.ico",
+    favicon_path="favicon.ico",
     server_port=args.listen_port,
     inbrowser=args.open
 )
