@@ -32,7 +32,7 @@ pip install -r "$REQUIREMENTS_FILE"
 
 echo "Running Python script..."
 # Run your Python file here
-python "$RUN_SCRIPT_FILE"
+python "$RUN_SCRIPT_FILE --open"
 
 echo "Deactivating the virtual environment..."
 # Deactivate the virtual environment
