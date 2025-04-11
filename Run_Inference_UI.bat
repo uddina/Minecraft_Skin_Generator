@@ -34,7 +34,7 @@ REM Print the step to the terminal
 echo Running Python script...
 
 REM Run your Python file here
-python "%~dp0Scripts\Run_Inference_UI.py --open"
+python "%~dp0Scripts\Run_Inference_UI.py" --open
 
 REM Print the step to the terminal
 echo Deactivating the virtual environment...
