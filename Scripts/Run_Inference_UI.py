@@ -56,9 +56,9 @@ def run_inference(prompt, stable_diffusion_model, num_inference_steps, guidance_
         os.system(command_3d_model)
         os.chdir("..")
         glb_path = os.path.join(f"output_minecraft_skins/{filename}_3d_model.glb")
-        return os.path.join(f"output_minecraft_skins/{filename}"), glb_path
+        return os.path.join(f"output_minecraft_skins/{filename}"), (f"output_minecraft_skins/{filename}-converted.png"), glb_path
     else:
-        return os.path.join(f"output_minecraft_skins/{filename}"), None
+        return os.path.join(f"output_minecraft_skins/{filename}"), (f"output_minecraft_skins/{filename}-converted.png"), None
 
 
 # Define Gradio UI components
@@ -89,6 +89,7 @@ gr.Interface(
     ],
     outputs=[
         gr.Image(label="Generated Minecraft Skin Image Asset", elem_classes="pixelated checkered"),
+        gr.Image(label="Converted PNG"),
         gr.Model3D(clear_color=[0.0, 0.0, 0.0, 0.0],  label="3D Model")
     ],
     title="Minecraft Skin Generator",
